@@ -35,7 +35,7 @@ public class UserController {
         IPage<User> page = new Page<>(pageNo, pageSize);
         QueryWrapper<User> wrapper = new QueryWrapper<>();
         User user = new User();
-        user.setId(1l);
+//        user.setId(1l);
         wrapper.like("name","J");
         wrapper.setEntity(user);
         return userService.page(page,wrapper);
