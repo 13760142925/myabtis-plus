@@ -1,0 +1,29 @@
+#端口号
+server:
+  port: 8081
+
+#数据源配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+    url: jdbc:mysql://localhost:3306/mybatisplus?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT
+    username: root
+    password: root
+
+mybatis-plus:
+  type-aliases-package: com.macio.mybatisplus.entity
+  configuration:
+    map-underscore-to-camel-case: true
+    use-generated-keys: true
+  mapper-locations: classpath:/mapper/*Mapper.xml
+
+#日志路径和文件名配置
+logging:
+  path: D:/log
+  #sql打印
+  level:
+    com.macio.mybatisplus.mapper: debug
+
+
+
